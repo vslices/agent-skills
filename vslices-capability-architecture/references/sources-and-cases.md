@@ -15,4 +15,6 @@
 6. Se pide extrapolar Spaces/Work/Grounding a Views o Queries: marcarlo como cuestión no acordada.
 7. Aparece Flow/WorkFlow/WorkProcess/WorkStep: consultar contrato real sin inventar equivalencias.
 
-Casos propuestos; sin evidencia de ejecución todavía.
+**Evidencia adicional requerida:** seleccionar implementaciones actuales de `vslices/framework` y una Feature consumidora real; confrontar sus contratos con el concepto pertinente antes de promover ejemplos a guía. Marcar cada ejemplo como **observado**, **aprobado** o **hipotético**; el nombre de una carpeta o clase no demuestra autoridad conceptual.
+
+Casos propuestos; sin evidencia de ejecución todavía. Comprobar también la aplicación simultánea con Solution Architecture sin confundir ownership entre repositorios con organización interna de capacidades.
