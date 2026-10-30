@@ -21,3 +21,5 @@ La fecha, responsables, referencias y decisiones pendientes se incorporan cuando
 - [2026-10-30 — Límites de evidencia, activación y cooperación de Skills](2026-10-30-skill-readiness-and-evidence.md)
 
 - [2026-10-30 — Estructura de Composition](2026-10-30-composition-layout.md)
+
+- [2026-10-30 — Identity: estructura y dependencias](2026-10-30-identity-layout-and-dependencies.md)
