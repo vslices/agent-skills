@@ -21,8 +21,10 @@ description: Aplicar y explicar la arquitectura Service, Product y Composition d
 2. Leer contratos vigentes y evidencia de código; distinguir decisión aprobada, realización observada y propuesta.
 3. Modificar el repositorio propietario. Para trabajo transversal, operar preferentemente desde Composition con Git submodules y usar ramas homónimas solo en módulos modificados; fijar versiones mediante gitlinks.
 4. Conservar pruebas locales e integración. Ejecutar la matriz E2E de la Composition sobre commits concretos cuando sea técnicamente posible; registrar la evidencia o declarar claramente lo no ejecutado.
-5. Para servicio compartido, exigir pruebas de todas las composiciones consumidoras afectadas antes de autorizar publicación. Ninguna Composition aprueba globalmente el servicio por sí sola; lo hace su pipeline consolidando resultados. Estados fallidos, omitidos, cancelados o pendientes no aprueban.
+5. Para servicio compartido, identificar todas las composiciones consumidoras afectadas y exigir sus pruebas antes de aprobar publicación. **Este es el contrato objetivo, no evidencia de que exista ya el pipeline agregador**. Si la compuerta no está implementada, ejecutar lo verificable, registrar consumidores y verificaciones faltantes y señalar explícitamente que no hay aprobación global. Ninguna Composition aprueba globalmente el servicio por sí sola; el pipeline propietario deberá consolidar resultados. Estados fallidos, omitidos, cancelados, pendientes o desconocidos no aprueban.
 6. Explicar decisiones relevantes mediante **responsabilidad → beneficio esperado → costo o riesgo → evidencia** sin dar discursos innecesarios en tareas simples.
+
+Antes de ejecutar una tarea, verificar que esta Skill esté realmente disponible en el entorno; el archivo en GitHub no implica instalación ni descubrimiento automático. Cuando falten conectores o acceso a fuentes, declarar la limitación sin reconstruir contratos de memoria.
 
 Consultar [razones y contraejemplos](references/rationale.md) cuando surja un caso ambiguo. Consultar [fuentes y casos de prueba](references/sources-and-cases.md) para cambios multi-repositorio y evaluación.
 
