@@ -17,14 +17,14 @@ description: Comprender y aplicar Spaces, Work y Grounding bajo autoridad concep
 - Una operación pura no requiere necesariamente efectos externos ni Grounding. No inferir atomicidad por secuencia ni durabilidad por seleccionar una base de datos.
 
 ## Procedimiento al modificar capacidades
-1. Consultar el código, contratos y referencias vigentes de Framework y del servicio consumidor.
+1. Consultar el código, contratos y referencias vigentes de Framework y del servicio consumidor. Distinguir expresamente la definición conceptual, su expresión en Language Specification y el comportamiento observado en una realización; **la relación exacta Framework–Language Specification sigue pendiente de revisión**.
 2. Identificar conceptos y Points involucrados, su admisibilidad y qué autoridad define sus condiciones.
 3. Describir intención, entrada, salida y promesa de resultado de la Feature sin comenzar por el transporte o la persistencia.
 4. Identificar Capabilities solicitadas, Guarantees necesarias y dónde Grounding puede realizarlas; distinguir lo requerido de lo comprobado.
-5. Examinar composición, fallos parciales y compatibilidad; realizar cambios mínimos, pruebas apropiadas y documentar la evidencia.
+5. Examinar composición, fallos parciales y compatibilidad; realizar cambios mínimos, pruebas apropiadas y documentar la evidencia. Para casos de implementación, contrastar con un ejemplo real de Framework o del servicio; si no hay ejemplo verificable, no convertir un patrón supuesto en convención.
 6. Explicar **beneficio → costo → límite** de las decisiones cuando corresponda; señalar preguntas abiertas sin inventar contratos del Framework.
 
 Consultar [significados y contraejemplos](references/semantics-and-rationale.md) cuando la tarea tenga ambigüedad conceptual y [fuentes y casos de evaluación](references/sources-and-cases.md) al trabajar con mecanismos o lenguaje.
 
 ## Límites
-No declarar que la sintaxis VSIR nueva, Flow, WorkFlow, WorkProcess o WorkStep ya tienen contratos cerrados cuando la fuente no lo demuestre. No convertir una forma observada de la implementación .NET en regla conceptual universal. Mantener separado el diseño de capacidades de la organización Service/Product/Composition: consultar `vslices-solution-architecture` cuando la tarea atraviese esos límites.
+No asumir que esta Skill se activa por existir en GitHub: comprobar su instalación y la accesibilidad de fuentes, o declarar la limitación. No declarar que la sintaxis VSIR nueva, Flow, WorkFlow, WorkProcess o WorkStep ya tienen contratos cerrados cuando la fuente no lo demuestre. No convertir una forma observada de la implementación .NET en regla conceptual universal. Mantener separado el diseño de capacidades de la organización Service/Product/Composition: consultar `vslices-solution-architecture` cuando la tarea atraviese esos límites.
