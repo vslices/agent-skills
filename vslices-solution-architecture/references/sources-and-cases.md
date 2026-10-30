@@ -12,7 +12,7 @@
 1. Cambio de contraseña solicitado desde Landing: reglas de credencial en Accounts y experiencia en Landing.
 2. Portal de aplicaciones accesibles: vista en Landing; no inventar permisos en UI.
 3. Account Service pasa pruebas unitarias, falla E2E Landing: bloquear aprobación de versión.
-4. Agregar componente a Composition: registrar gitlink, ejecutar escenario, no mover reglas de dominio.
+4. Agregar componente a Composition: montar submódulos bajo `products/` o `services/` según su responsabilidad, mantener AppHost en raíz, registrar gitlink, referenciar desde Aspire, ejecutar escenario y no mover reglas funcionales al host.
 5. Perfil consulta datos de dos servicios: no inferir automáticamente traslado a uno de ellos.
 6. Sistema ajeno a VSlices: no aplicar obligatoriamente estas convenciones.
 
