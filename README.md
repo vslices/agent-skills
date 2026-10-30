@@ -21,6 +21,10 @@ La responsabilidad de **definir o cambiar** la arquitectura sigue en sus respons
 
 Consultar [procedimiento de desarrollo y evaluación](docs/skill-development-procedure.md). La prioridad es **cobertura semántica probada**, no longitud documental.
 
+## Autoridad conceptual y enrutamiento
+
+La identidad conceptual de Framework y Language Specification se recupera primero desde [the-alive-lab/vslices](https://github.com/the-alive-lab/vslices), que funciona también como **router** hacia [Framework](https://github.com/the-alive-lab/vslices/blob/main/products/framework/README.md), [Language Specification](https://github.com/the-alive-lab/vslices/blob/main/products/lang-specification/README.md) y las superficies especializadas. Las Skills transmiten criterios y facilitan su aplicación; **no son fuentes normativas competidoras**. La terminología operacional vigente es **Composition** (antes Nexo/Nexus); no confundirla con Nexus documental de Docs Standard.
+
 ## Fuentes actuales y autoridad
 
 - [Landing Product: responsabilidades](https://github.com/atom-dev-serviu/landing-product/blob/main/RESPONSIBILITIES.md)
