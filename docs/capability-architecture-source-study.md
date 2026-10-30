@@ -2,6 +2,10 @@
 
 **Fecha:** 2026-10-29. **Estado:** recuperación documental inicial para diseñar `vslices-capability-architecture`; **no es una Skill terminada ni una especificación universal nueva**.
 
+## Autoridad conceptual fijada para el desarrollo de la Skill
+
+**Spaces, Work y Grounding pertenecen a VSlices Framework**, entendido como sistema de desarrollo que utiliza Language Specification. La presencia de articulaciones en `vslices/lang-specification` no transfiere su autoridad. La reconciliación exacta con el lenguaje será revisada por separado; no bloquear por ello la Skill de Framework ni reinterpretar unilateralmente los conceptos de lenguaje.
+
 ## Corrección fundamental
 
 Es **incorrecto** equiparar `Spaces / Work / Grounding` con `Domain / Application / Infrastructure`. La organización reconoce inspiración histórica en DDD, pero sus definiciones y fronteras **no coinciden** con esas capas. No reformularlas como equivalencias pedagógicas ni transferir implícitamente propiedades de agregados, repositorios o unidades transaccionales.
