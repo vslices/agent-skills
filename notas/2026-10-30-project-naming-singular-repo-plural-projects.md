@@ -26,4 +26,4 @@ Las Skills instruyen explícitamente a usar plural en proyectos, namespaces base
 - La pluralización de nombres irregulares exige criterio explícito, no reemplazos mecánicos indiscriminados.
 
 ## Estado y verificación
-Convención documentada; la compilación y pruebas del consumidor se verifican separadamente en su repositorio. Esta nota corrige los nombres de proyectos de `2026-10-30-identity-layout-and-dependencies.md` sin reescribir retrospectivamente aquel registro histórico.
+Convención documentada y aplicada a `atom-dev-serviu/identity-service`: renombrados proyectos, namespaces, tests y CI en `migration/identity-first-cut`. Build y pruebas del corte Spaces+Work **verificados en GitHub Actions #41054628503**: 0 errores, 8/8 pruebas exitosas. La prueba real confirma que las nuevas rutas y nombres compilan en este consumidor; no demuestra todavía compatibilidad de todos los consumidores. Esta nota corrige los nombres de proyectos de `2026-10-30-identity-layout-and-dependencies.md` sin reescribir retrospectivamente aquel registro histórico.
