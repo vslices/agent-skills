@@ -6,8 +6,8 @@ Espacio para desarrollar y evaluar capacidades reutilizables de agentes que trab
 
 | Skill candidata | Responsabilidad | Caso de uso |
 | --- | --- | --- |
-| `vslices-solution-architecture` | Enseñar y aplicar la organización **Service / Product / Composition**, con su semántica, límites, beneficios, costos y comprobación de integración. | Un agente modifica Landing, Account Service o una Composition y necesita respetar su ownership. |
-| `vslices-capability-architecture` | Enseñar y aplicar **Spaces / Work / Grounding** a las capacidades internas, comenzando por servicios, sin equipararlos automáticamente con Domain / Application / Infrastructure. | Un agente implementa una capacidad de un servicio y debe preservar sus invariantes, operaciones y realización de efectos. |
+| [`vslices-solution-architecture`](vslices-solution-architecture/SKILL.md) | Enseñar y aplicar la organización **Service / Product / Composition**, con su semántica, límites, beneficios, costos y comprobación de integración. | Un agente modifica Landing, Account Service o una Composition y necesita respetar su ownership. |
+| [`vslices-capability-architecture`](vslices-capability-architecture/SKILL.md) | Enseñar y aplicar **Spaces / Work / Grounding** a las capacidades internas, comenzando por servicios, sin equipararlos automáticamente con Domain / Application / Infrastructure. | Un agente implementa una capacidad de un servicio y debe preservar sus invariantes, operaciones y realización de efectos. |
 
 Son **dimensiones complementarias**, no sinónimas ni dos niveles obligatorios de todo repositorio. Una tarea de integración puede requerir solo Solution Architecture; una funcionalidad de servicio puede requerir ambas.
 
@@ -37,4 +37,4 @@ Los contratos específicos de un repositorio conservan sus responsabilidades con
 
 ## Estado
 
-**29-10-2026:** alcance de dos Skills distinguido; proceso de construcción definido; implementación y pruebas de ambas pendientes. No adoptar como norma definitiva los nombres de las dimensiones sin contrastarlos con el vocabulario canónico.
+**30-10-2026:** primeros borradores de ambas Skills publicados con referencias y casos de evaluación. **No instaladas ni evaluadas todavía con agentes reales**. Spaces, Work y Grounding pertenecen conceptualmente a VSlices Framework; Language Specification articula su expresión en el lenguaje sin asumir ownership. No adoptar como norma definitiva los nombres de las dimensiones sin contrastarlos con el vocabulario canónico.
