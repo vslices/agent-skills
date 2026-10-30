@@ -26,5 +26,8 @@ description: Comprender y aplicar Spaces, Work y Grounding bajo autoridad concep
 
 Consultar [significados y contraejemplos](references/semantics-and-rationale.md) cuando la tarea tenga ambigüedad conceptual y [fuentes y casos de evaluación](references/sources-and-cases.md) al trabajar con mecanismos o lenguaje.
 
+## Organización del servicio (convención de consumidor)
+En la migración de Identity Service, usar `src/Identity.Spaces`, `src/Identity.Work`, `src/Identity.Grounding` como proyectos que materializan las superficies correspondientes; no derivar de su ubicación contratos conceptuales nuevos. Mantener las dependencias del servicio bajo `dependencies/` (por ahora `TerritorialDivisions` como código directo, no submódulo de Composition). Mantener pruebas actuales en `tests/Identity.Tests.Regression`; `tests/Identity.Tests.Progression` es una intención experimental, **no crearla aún**. El proyecto que expone el servicio mediante API, CLI o procesos background necesita nombre y contrato definitivos; `Identity.Entrypoints` es una propuesta, no una decisión adoptada.
+
 ## Límites
 No asumir que esta Skill se activa por existir en GitHub: comprobar su instalación y la accesibilidad de fuentes, o declarar la limitación. No declarar que la sintaxis VSIR nueva, Flow, WorkFlow, WorkProcess o WorkStep ya tienen contratos cerrados cuando la fuente no lo demuestre. No convertir una forma observada de la implementación .NET en regla conceptual universal. Mantener separado el diseño de capacidades de la organización Service/Product/Composition: consultar `vslices-solution-architecture` cuando la tarea atraviese esos límites.
