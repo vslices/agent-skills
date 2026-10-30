@@ -16,4 +16,6 @@
 5. Perfil consulta datos de dos servicios: no inferir automáticamente traslado a uno de ellos.
 6. Sistema ajeno a VSlices: no aplicar obligatoriamente estas convenciones.
 
-Estos casos son **batería propuesta**, no evaluaciones ya ejecutadas.
+**Escenario combinado pendiente de prueba:** implementar una capacidad de Accounts utilizada por Landing, identificar reglas propietarias, contratos de producto y regresiones de Landing Composition, consultando Capability Architecture únicamente para semántica interna de Spaces/Work/Grounding.
+
+Estos casos son **batería propuesta**, no evaluaciones ya ejecutadas. Para cada ejecución registrar entrada, fuentes efectivamente consultadas, respuesta/cambio producido, evidencia de pruebas y desviaciones. La publicación de los documentos no es prueba de activación ni corrección.
