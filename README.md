@@ -35,6 +35,10 @@ La identidad conceptual de Framework y Language Specification se recupera primer
 
 Los contratos específicos de un repositorio conservan sus responsabilidades concretas. Las Skills no deben copiar todo su contenido; deben orientarse a consultarlos y explicar cómo interpretar los casos reales.
 
+## Registro de cambios
+
+Las mejoras de las Skills y su justificación se registran en [notas/](notas/README.md). Cada nota describe ubicación, motivo, mecanismo de resolución y riesgos reducidos y aumentados; no debe confundir una propuesta con una validación ejecutada.
+
 ## Estado
 
 **30-10-2026:** primeros borradores de ambas Skills publicados con referencias y casos de evaluación. **No instaladas ni evaluadas todavía con agentes reales**. Spaces, Work y Grounding pertenecen conceptualmente a VSlices Framework; Language Specification articula su expresión en el lenguaje sin asumir ownership. No adoptar como norma definitiva los nombres de las dimensiones sin contrastarlos con el vocabulario canónico.
