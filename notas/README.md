@@ -23,3 +23,5 @@ La fecha, responsables, referencias y decisiones pendientes se incorporan cuando
 - [2026-10-30 — Estructura de Composition](2026-10-30-composition-layout.md)
 
 - [2026-10-30 — Identity: estructura y dependencias](2026-10-30-identity-layout-and-dependencies.md)
+
+- [2026-10-30 — Singular en repositorios, plural en proyectos y namespaces](2026-10-30-project-naming-singular-repo-plural-projects.md)

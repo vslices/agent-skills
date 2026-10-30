@@ -16,6 +16,11 @@ description: Aplicar y explicar la arquitectura Service, Product y Composition d
 - **Composition:** escenario operacional reproducible de productos, servicios y recursos, **principal superficie de desarrollo integrado y supervisión de regresión**. No posee las reglas funcionales de los participantes. Comprobar los contratos de integración, no solo la disponibilidad del host.
 - Distinguir propiedad semántica, repositorio, ensamblado, proceso y despliegue. No inferir microservicios universales.
 
+## Convención de nombres de repositorios y proyectos
+- Nombrar el **repositorio propietario por el dominio en singular** (`identity-service`), pues el identificador de repositorio evita colisiones entre dominios.
+- Nombrar **todos los ensamblados/proyectos `.csproj` por el dominio en plural**, incluido el namespace base que corresponde al proyecto (`Identities.Spaces`, `Identities.Work`, `Identities.Grounding`, `Identities.Hosting` y, cuando se adopte, `Identities.Toolkit`). La pluralización debe respetar el vocabulario efectivo del dominio, no aplicar ciegamente una regla morfológica.
+- No inferir nombres de namespaces de un repositorio singular. Revisar proyecto, `RootNamespace`, rutas, tests, referencias, archivos de solución, CI y documentación en renombrados. No crear `Toolkit` por la sola existencia de la convención.
+
 ## Cómo trabajar
 1. Identificar el propósito de la modificación y qué participante tiene autoridad sobre las reglas, la experiencia y la verificación.
 2. Leer contratos vigentes y evidencia de código; distinguir decisión aprobada, realización observada y propuesta.
