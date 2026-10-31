@@ -25,6 +25,13 @@ description: Aplicar y explicar la arquitectura Service, Product y Composition d
 - Distinguir `[Product].Hosting` (composición y runtime del producto) de `Composition` (supervisión operativa y E2E de varios participantes).
 - No atribuir un layout proyectado a proyectos ya creados; contrastar el monorepo y las pruebas antes de mover código.
 
+## Lecturas de Product y pruebas transversales — criterio reutilizable
+
+- Distinguir custodia de escritura y reglas de un **Service** del ownership de un modelo canónico de lectura definido por un **Product**. El servicio y su esquema pueden ser fuentes sin apropiarse de las necesidades de la experiencia. Una lectura que combine varias fuentes puede seguir siendo Feature de Product.Work.
+- Distinguir **modelo canónico de lectura** de mecanismo físico. No imponer a todo Product SQL views, tablas materializadas, esquemas propios, EF Core, Dapper o un deployment independiente. Consultar los contratos del consumidor.
+- Asignar a **Composition** la verificación transversal de fuentes versionadas, compatibilidad de contratos y E2E de solución; no obligar a utilizar navegador para contratos SQL/HTTP que puedan verificarse directamente. Un CI local verde no prueba la compatibilidad global. Exigir evidencia sobre revisiones exactas y distinguir obligación de implementación real.
+- **Condición propia de Serviu Landing, no universal:** consultar [Landing Product](https://github.com/atom-dev-serviu/landing-product/blob/main/BOOTSTRAP.md) y [Landing Composition](https://github.com/atom-dev-serviu/landing-composition/blob/main/RESPONSIBILITIES.md). Desarrollo, QA y PROD comparten una sola base SQL Server para Landing, Accounts e Identity. Las pruebas de contrato de fuentes con las migraciones reales son obligatorias; si se propone separar las bases, detener adopción y elevar alerta con riesgos y desarrollo compensatorio. No declarar esa separación como simple configuración.
+
 ## Convención de nombres de repositorios y proyectos
 - Nombrar el **repositorio propietario por el dominio en singular** (`identity-service`), pues el identificador de repositorio evita colisiones entre dominios.
 - Nombrar **todos los ensamblados/proyectos `.csproj` por el dominio en plural**, incluido el namespace base que corresponde al proyecto (`Identities.Spaces`, `Identities.Work`, `Identities.Grounding`, `Identities.Hosting` y, cuando se adopte, `Identities.Toolkit`). La pluralización debe respetar el vocabulario efectivo del dominio, no aplicar ciegamente una regla morfológica.
