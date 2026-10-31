@@ -12,9 +12,18 @@ description: Aplicar y explicar la arquitectura Service, Product y Composition d
 
 ## Modelo que aplicar
 - **Service:** propietario de una responsabilidad funcional, reglas, garantías y estado pertinente; expone capacidades privadas a productos autorizados. No implica despliegue ni base de datos por sí mismo.
-- **Product:** propietario de experiencia y procesos propios. En el caso Serviu, Views presenta interacción; BFF coordina procesos y capacidades; Queries conserva modelos de lectura/representación específicos del producto. No duplicar reglas que pertenecen a servicios.
+- **Product:** propietario de experiencia y procesos propios. En Landing (decisión del 2026-10-31), `Views` presenta interacción; `Spaces` define semántica; `Work` contiene **todas las Features**, incluidas consultas y coordinación (convergen los antiguos BFF y Queries); `Grounding` realiza capacidades; `Hosting` compone dependencias y es la unidad desplegable ordinaria. No duplicar reglas que pertenecen a servicios. Este acuerdo es la **estructura objetivo de Landing**, no evidencia de migración terminada ni una obligación universal para otros productos.
 - **Composition:** escenario operacional reproducible de productos, servicios y recursos, **principal superficie de desarrollo integrado y supervisión de regresión**. No posee las reglas funcionales de los participantes. Comprobar los contratos de integración, no solo la disponibilidad del host.
 - Distinguir propiedad semántica, repositorio, ensamblado, proceso y despliegue. No inferir microservicios universales.
+
+## Decisión de producto: Hosting y convergencia de lectura/coordinación
+
+- Para reconstruir Landing, consultar primero [su bootstrap](https://github.com/atom-dev-serviu/landing-product/blob/main/BOOTSTRAP.md) y `RESPONSIBILITIES.md`. Las referencias históricas a `Landing.BFF`, `Landing.Queries` y `Views.Host` son fuentes de código y obligaciones funcionales; **no la estructura objetivo**.
+- `Landing.Work` conserva Features de consulta aunque solo deleguen una lectura; `Landing.Spaces` no debe transformarse en capa de casos de uso. El dominio de lectura propio del producto puede estar en Spaces sin trasladar reglas de Accounts o Identities.
+- La separación física por proyecto **no implica despliegue separado**. En general `[Product].Hosting` compone Views, Work y Grounding como unidad desplegable. Examinar excepciones concretas (por ejemplo, cliente nativo móvil desplegado aparte del BFF).
+- `Shared.Spaces` es una posible dependencia **condicionada a identidad semántica real y admisibilidad coincidente** entre conceptos, no a igualdad de nombre ni formato. No imponerla de antemano.
+- Distinguir `[Product].Hosting` (composición y runtime del producto) de `Composition` (supervisión operativa y E2E de varios participantes).
+- No atribuir un layout proyectado a proyectos ya creados; contrastar el monorepo y las pruebas antes de mover código.
 
 ## Convención de nombres de repositorios y proyectos
 - Nombrar el **repositorio propietario por el dominio en singular** (`identity-service`), pues el identificador de repositorio evita colisiones entre dominios.
