@@ -2,7 +2,7 @@
 
 ## Autoridad
 - [Framework — arquitectura de solución](https://github.com/the-alive-lab/vslices/blob/main/products/framework/service-product-nexus.md).
-- [Landing Product](https://github.com/atom-dev-serviu/landing-product/blob/main/RESPONSIBILITIES.md).
+- [Landing Product](https://github.com/atom-dev-serviu/landing-product/blob/main/RESPONSIBILITIES.md) y [bootstrap arquitectónico vigente](https://github.com/atom-dev-serviu/landing-product/blob/main/BOOTSTRAP.md).
 - [Account Service](https://github.com/atom-dev-serviu/account-service/blob/main/RESPONSIBILITIES.md).
 - [Identity Service](https://github.com/atom-dev-serviu/identity-service/blob/main/RESPONSIBILITIES.md).
 - [Landing Composition](https://github.com/atom-dev-serviu/landing-composition/blob/main/RESPONSIBILITIES.md).
@@ -14,7 +14,9 @@
 3. Account Service pasa pruebas unitarias, falla E2E Landing: bloquear aprobación de versión.
 4. Agregar componente a Composition: montar submódulos bajo `products/` o `services/` según su responsabilidad, mantener AppHost en raíz, registrar gitlink, referenciar desde Aspire, ejecutar escenario y no mover reglas funcionales al host.
 5. Perfil consulta datos de dos servicios: no inferir automáticamente traslado a uno de ellos.
-6. Sistema ajeno a VSlices: no aplicar obligatoriamente estas convenciones.
+6. Landing Queries y BFF convergen en Work: mantener una consulta simple como Feature de Work, extraer sus tipos semánticos a Spaces y el acceso SQL a Grounding sin forzar un despliegue por proyecto.
+7. Dos dominios usan tipos con el mismo nombre: comprobar semántica y admisibilidad antes de promover `Shared.Spaces`.
+8. Sistema ajeno a VSlices: no aplicar obligatoriamente estas convenciones.
 
 **Escenario combinado pendiente de prueba:** implementar una capacidad de Accounts utilizada por Landing, identificar reglas propietarias, contratos de producto y regresiones de Landing Composition, consultando Capability Architecture únicamente para semántica interna de Spaces/Work/Grounding.
 
