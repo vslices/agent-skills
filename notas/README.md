@@ -27,3 +27,5 @@ La fecha, responsables, referencias y decisiones pendientes se incorporan cuando
 - [2026-10-30 — Singular en repositorios, plural en proyectos y namespaces](2026-10-30-project-naming-singular-repo-plural-projects.md)
 
 - [2026-10-31 — Arquitectura de Landing: Work, Hosting y Shared.Spaces](2026-10-31-landing-product-work-hosting-shared-spaces.md)
+
+- [2026-10-31 — Modelo canónico de lectura y contratos de fuentes](2026-10-31-canonical-product-read-model-and-source-contract.md)
