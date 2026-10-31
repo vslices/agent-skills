@@ -25,3 +25,5 @@ La fecha, responsables, referencias y decisiones pendientes se incorporan cuando
 - [2026-10-30 — Identity: estructura y dependencias](2026-10-30-identity-layout-and-dependencies.md)
 
 - [2026-10-30 — Singular en repositorios, plural en proyectos y namespaces](2026-10-30-project-naming-singular-repo-plural-projects.md)
+
+- [2026-10-31 — Arquitectura de Landing: Work, Hosting y Shared.Spaces](2026-10-31-landing-product-work-hosting-shared-spaces.md)
