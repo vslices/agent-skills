@@ -16,6 +16,16 @@ description: Comprender y aplicar Spaces, Work y Grounding bajo autoridad concep
 - **No imponer una traducción Domain/Application/Infrastructure.** La inspiración DDD no determina estas fronteras; no exigir capas físicas, archivos ni proyectos.
 - Una operación pura no requiere necesariamente efectos externos ni Grounding. No inferir atomicidad por secuencia ni durabilidad por seleccionar una base de datos.
 
+## Aplicación a Products: acuerdo Landing (2026-10-31)
+
+- **Spaces define espacios; Work define funcionalidades; Grounding realiza capacidades.** Esta separación también vale para Product sin duplicar capas innecesarias ni traducirla rígidamente a DDD.
+- En [Landing Product](https://github.com/atom-dev-serviu/landing-product/blob/main/BOOTSTRAP.md), tanto las Features históricas de `Landing.BFF` como las de `Landing.Queries` pasan al objetivo `Landing.Work`. Una consulta de lectura sigue perteneciendo a Work aunque no coordine otras llamadas. **No mover Features a Spaces por su sencillez.**
+- Los modelos de lectura con semántica del producto y los Points que consumen sus vistas corresponden a `Landing.Spaces`; las consultas SQL y clientes externos que realizan Capabilities solicitadas por Work, a `Landing.Grounding`. Esto no acredita que las fuentes históricas hayan sido migradas ni que los mecanismos concretos ya estén aprobados.
+- Valorar `Shared.Spaces` **solo cuando las definiciones representan verdaderamente la misma semántica y admisibilidad entre consumidores**, tras examinar ownership y diferencias de contexto; no crear un repositorio compartido por parecido nominal o por evitar duplicación superficial. No transferir invariantes autoritativas de Accounts/Identity hacia Landing.
+- Los tipos pueden centralizar representación semánticamente coherente para evitar formatos manuales repetidos en las vistas; distinguirla de preferencias locales, cultura, unidad y otras reglas contextuales.
+- `Landing.Views` presenta; `Landing.Hosting` configura DI y runtime del producto. Ninguno redefine la responsabilidad conceptual de Spaces, Work o Grounding. Los proyectos de Product se despliegan juntos **por defecto**; separaciones como un cliente nativo se justifican caso a caso. No confundir Hosting con Composition E2E.
+- Al probar: verificar admisibilidad y representación en Spaces; Features de consulta y coordinación en Work con Capabilities controladas; contratos HTTP/SQL en Grounding; experiencia en Views; cableado en Hosting; compatibilidad transversal en Composition. Registrar qué se ejecutó.
+
 ## Procedimiento al modificar capacidades
 1. Consultar el código, contratos y referencias vigentes de Framework y del servicio consumidor. Distinguir expresamente la definición conceptual, su expresión en Language Specification y el comportamiento observado en una realización; **la relación exacta Framework–Language Specification sigue pendiente de revisión**.
 2. Identificar conceptos y Points involucrados, su admisibilidad y qué autoridad define sus condiciones.
