@@ -11,3 +11,7 @@ Proporciona una realización para capacidades necesarias, sujeta a condiciones d
 
 ## Fronteras
 Estas tres superficies pertenecen a **Framework**, no son reinterpretaciones de capas DDD ni propiedad de Language Specification por el hecho de que allí existan articulaciones para el lenguaje. La existencia de tres superficies reconocidas no establece una taxonomía futura cerrada ni una separación física obligatoria.
+
+## Caso Landing: unificar funcionalidades sin borrar diferencias
+
+Una pantalla requiere un perfil: **Work** define la Feature de consulta y su resultado; **Spaces** da significado a los datos y a las representaciones coherentes; **Grounding** realiza la lectura, con garantías contrastadas respecto de la autoridad del esquema. Que la Feature sea una sola lectura no la desplaza a Spaces. El antiguo BFF y Queries son procedencia de implementación, no dos autoridades futuras. `Shared.Spaces` solo procede tras verificar identidad semántica y admisibilidad entre dominios.
