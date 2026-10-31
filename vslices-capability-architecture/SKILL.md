@@ -26,6 +26,13 @@ description: Comprender y aplicar Spaces, Work y Grounding bajo autoridad concep
 - `Landing.Views` presenta; `Landing.Hosting` configura DI y runtime del producto. Ninguno redefine la responsabilidad conceptual de Spaces, Work o Grounding. Los proyectos de Product se despliegan juntos **por defecto**; separaciones como un cliente nativo se justifican caso a caso. No confundir Hosting con Composition E2E.
 - Al probar: verificar admisibilidad y representación en Spaces; Features de consulta y coordinación en Work con Capabilities controladas; contratos HTTP/SQL en Grounding; experiencia en Views; cableado en Hosting; compatibilidad transversal en Composition. Registrar qué se ejecutó.
 
+## Proyecciones y contratos de fuentes en Products
+
+- Reconocer la diferencia entre **semántica canónica de lectura** definida en Product.Spaces, **Feature lectora** de Product.Work y **realización/proyección** en Product.Grounding. La fuente de datos externa no define automáticamente lo que la vista necesita.
+- No convertir una fuente canónica en obligación de crear esquema SQL, vista, tabla materializada o usar un ORM específico; el mecanismo se decide tras observar presión, contratos y garantías. Una misma Feature puede combinar varias fuentes sin absorber la autoridad de escritura de los Services.
+- Probar Spaces y Work con capacidades controladas; probar Grounding contra el motor y contratos adecuados; comprobar la compatibilidad de migraciones de las fuentes reales mediante Composition. Mocks o esquemas inventados no demuestran compatibilidad entre fuentes versionadas.
+- En Serviu Landing, una **misma base SQL Server** para Landing, Accounts e Identity es condición de operabilidad de desarrollo/QA/PROD, no regla universal del Framework. Ver [bootstrap de Landing](https://github.com/atom-dev-serviu/landing-product/blob/main/BOOTSTRAP.md). Separarla exige alerta de riesgos, mecanismos compensatorios y nuevas pruebas.
+
 ## Procedimiento al modificar capacidades
 1. Consultar el código, contratos y referencias vigentes de Framework y del servicio consumidor. Distinguir expresamente la definición conceptual, su expresión en Language Specification y el comportamiento observado en una realización; **la relación exacta Framework–Language Specification sigue pendiente de revisión**.
 2. Identificar conceptos y Points involucrados, su admisibilidad y qué autoridad define sus condiciones.
